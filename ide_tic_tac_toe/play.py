@@ -1,6 +1,7 @@
 import sys
 
 
+
 spaces = {
     3: {f"{l}{n}" for l in ["a", "b", "c"] for n in [1, 2, 3]},
 }
