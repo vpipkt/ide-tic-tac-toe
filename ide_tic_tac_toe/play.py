@@ -1,5 +1,5 @@
 import sys
-
+import printer
 
 
 spaces = {
@@ -8,7 +8,9 @@ spaces = {
 
 print("spaces  " + str(sorted(spaces[3])))
 
-played = []
+computer = []
+player = []
+
 while True:
 
     m = input('Your turn: ')
@@ -22,11 +24,17 @@ while True:
         print("Hmm I didn't understand")
         continue
 
-    if m in played:
+    if m in computer or m in player:
         print("That space is already taken!")
         continue
 
-    played.append(m)
+    player.append(m)
 
-    # instead of just saying what we said, tell us what the board looks like now
-    print(f"Board #: {played}")
+    # Now computer plays...
+    # TODO 
+
+    # Print the board
+    printer.print_board(
+        xs=player,
+        os=computer,
+    )
